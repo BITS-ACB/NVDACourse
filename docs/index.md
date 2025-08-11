@@ -10,6 +10,7 @@ Nothing is set in stone, this is here for people to take a look and comment.
 I'm using Python's sphinx package with the pydata-spinx-theme.
 Docs are published on github pages using a github action.
 All content is written in markdown with anything fancy using myst-parser defined extensions. 
+I cannot seem to get the primary sidebar to show on the main page, working on that.
 
 Cheers!!
 
