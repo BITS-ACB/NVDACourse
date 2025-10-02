@@ -1,0 +1,337 @@
+<h1 id="bits-nvda-course-week-2">BITS NVDA Course, Week 2</h1>
+<h2 id="agenda">Agenda</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Topic</th>
+<th>Instructor</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A.</td>
+<td>Introduction</td>
+<td>Debee Armstrong</td>
+<td>5 minutes</td>
+</tr>
+<tr>
+<td>B.</td>
+<td>Student questions</td>
+<td>All instructors</td>
+<td>15 minutes</td>
+</tr>
+<tr>
+<td>C.</td>
+<td>Optional homework presentations</td>
+<td>Various Students</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>D.</td>
+<td>Basic Web Navigation</td>
+<td>Jeff Bishop</td>
+<td>45 minutes</td>
+</tr>
+<tr>
+<td>e.</td>
+<td>Working with modern web apps</td>
+<td>Taylor Arndt</td>
+<td>30 Minutes</td>
+</tr>
+<tr>
+<td>F.</td>
+<td>Student questions</td>
+<td>All instructors</td>
+<td>remainder of class time</td>
+</tr>
+</tbody>
+</table>
+<h2 id="terminology">Terminology</h2>
+<h3 id="element"><strong>Element</strong></h3>
+<p>An item on a web page. Elements include links, headings, lists,
+paragraphs and form fields like check boxes and radio buttons. Jus as
+Windows applications use controls, websites use elements.</p>
+<h3 id="single-letter-navigation"><strong>Single-letter
+navigation</strong></h3>
+<p>A method that lets screen reader users press a single keystroke to
+navigate to an element on a web page. For example, pressing h moves to
+the next heading.</p>
+<h3 id="browse-mode"><strong>Browse Mode</strong></h3>
+<p>This is similar to the JAWS virtual cursor mode or the Narrator scan
+mode. It presents a web page as a document comprised of elements that a
+user can navigate with arrow keys and single-letter navigation
+keystrokes. When sighted people look at a page with their eyes, they can
+only read, and not interact using their eyes. This is like a pair of
+eyes for viewing a web page. Even if you are interacting, you can easily
+return to browse mode to read what is around you on the page. Sighted
+people of course can also look with their eyes while typing with their
+hands and clicking with their mouse. You need to switch modes to tell
+NVDA what you want to do.</p>
+<h3 id="focus-mode"><strong>Focus Mode</strong></h3>
+<p>This is like the JAWS forms mode. Just as sighted people must use a
+keyboard or mouse to interact with a web page, you must enter focus mode
+to interact. When a sighted person clicks on an element they are now
+focused on it. When we press Enter, we are also interacting with it and
+focus mode is automatically engaged.</p>
+<h3 id="form"><strong>Form</strong></h3>
+<p>This is any place on a web page where the user can add information.
+Forms can include radio buttons, check boxes and edit boxes. Forms can
+also include drop-down lists, spin controls and other less common
+elements.</p>
+<h3 id="rich-edit-control"><strong>Rich edit control</strong></h3>
+<p>This is a mini word processor built in to a web page. It often has a
+toolbar and a menu for you to add formatting, such as font, centering,
+underlining, boldfacing and even embedding graphics or media. Often an
+edit box in a form is a rich edit box, which means you can add some
+formatting but not have the full word processor experience.</p>
+<h2 id="browser-basics">Browser basics</h2>
+<ul class="incremental">
+<li>Edge, Chrome, Firefox. Have all 3 on your system; one is the default
+and can be changed.</li>
+<li>Use Browse mode for reading, focus mode for interacting.</li>
+<li>Web pages are composed of elements.</li>
+<li>NVDA with F7 is your friend.</li>
+</ul>
+<h3 id="elements-and-corresponding-keystrokes">Elements and
+corresponding keystrokes</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Keystroke</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>heading</td>
+<td>h</td>
+</tr>
+<tr>
+<td>headings</td>
+<td>1 to 6</td>
+</tr>
+<tr>
+<td>list</td>
+<td>l</td>
+</tr>
+<tr>
+<td>list item</td>
+<td>i</td>
+</tr>
+<tr>
+<td>table</td>
+<td>t</td>
+</tr>
+<tr>
+<td>link</td>
+<td>k</td>
+</tr>
+<tr>
+<td>nonLinked text</td>
+<td>n</td>
+</tr>
+<tr>
+<td>unvisited link</td>
+<td>u</td>
+</tr>
+<tr>
+<td>visited link</td>
+<td>v</td>
+</tr>
+<tr>
+<td>form field</td>
+<td>f</td>
+</tr>
+<tr>
+<td>edit field</td>
+<td>e</td>
+</tr>
+<tr>
+<td>button</td>
+<td>b</td>
+</tr>
+<tr>
+<td>checkbox</td>
+<td>x</td>
+</tr>
+<tr>
+<td>combo box</td>
+<td>c</td>
+</tr>
+<tr>
+<td>radio button</td>
+<td>r</td>
+</tr>
+<tr>
+<td>block quote</td>
+<td>q</td>
+</tr>
+<tr>
+<td>separator</td>
+<td>s</td>
+</tr>
+<tr>
+<td>frame</td>
+<td>f</td>
+</tr>
+<tr>
+<td>graphic</td>
+<td>g</td>
+</tr>
+<tr>
+<td>landmark</td>
+<td>d</td>
+</tr>
+<tr>
+<td>embedded object</td>
+<td>o</td>
+</tr>
+<tr>
+<td>annotation</td>
+<td>a</td>
+</tr>
+<tr>
+<td>paragraph</td>
+<td>p</td>
+</tr>
+<tr>
+<td>spelling error</td>
+<td>w</td>
+</tr>
+</tbody>
+</table>
+<p>Note: If you forget a single-letter navigation keystroke, use NVDA
+with the 1 key to enter the key describer mode.</p>
+<h2 id="finding-text">Finding Text</h2>
+<p>Press NVDA with Control+F for the Find command. Note this is
+different from JAWS which uses Control+F. If you press Control+F by
+mistake, you are using the browser’s built-in Find command which will
+highlight found text but not navigate NVDA to that location.</p>
+<p>To find the next occurrence, hold the NVDA key and press F3. Hold
+NVDA and press Shift-F3 for locating the previous occurrence.</p>
+<p>Note: If you know JAWS well, this is a different keystroke. JAWS
+repurposed the Control-F keystroke for its own find, whereas NVDA leaves
+Control-F alone.</p>
+<h2 id="tips">Tips</h2>
+<ul class="incremental">
+<li>Press the NVDA key with the spacebar to toggle between focus and
+browse mode. Press Escape to return to Browse mode and exit focus mode.
+When in focus mode, therefore, either pressing Escape or the NVDA key
+with the Spacebar returns you to browse mode.</li>
+<li>If you have navigated to a form element, you can press Enter to make
+it active, which automatically turns focus mode on. This is the same as
+clicking on it.</li>
+<li>If your website or application needs to use keystrokes that conflict
+with single-letter navigation, toggle that NVDA feature off with NVDA +
+Shift + Spacebar. For example you need to press K to pause a YouTube
+video and you also use keystrokes with applications like FaceBook, X and
+the google suite. When you are in focus mode, your keyboard is
+available, but you need this keystroke in browse mode if you want to
+remain in browse mode but use some keystrokes for the web
+application.</li>
+<li>When surveying or skimming an unfamiliar page, use NVDA-F7 for an
+overview of available elements. If working with a sighted helper, this
+keystroke helps them see what elements are available.</li>
+<li>Use shift with single-letter navigation keys to move to the previous
+element of that type.</li>
+<li>Refresh browse mode content with the NVDA key and F5.</li>
+<li>With interfering advertising, use the reader mode. On Edge and
+Firefox, press F9. On Chrome, you must use an extension as the default
+feature is activated by clicking an icon; it has no keystroke associated
+with it.</li>
+<li>To avoid loosing your place on a page, press Shift-Enter to open a
+link in a new window.</li>
+<li>Tab goes to the next link but can also move you off the web page.
+Control + F6 will return you to the page content and exit the browser
+interface.</li>
+<li>Pressing F11 toggles between full-screen mode and a mode where the
+browser interface is visible.</li>
+<li>Use Alt-Down arrow to open a drop-down list.</li>
+<li>There are two ways to move by paragraph. The single letter
+navigation keystroke p moves forward past website clutter to get to the
+next block of text. Once you are reading actual text, you can use
+control-down arrow and control-up arrow to move between paragraphs
+within that text.</li>
+<li>To save the content of a link, navigate to it and use the context
+menu.</li>
+<li>Though h goes to the next heading, you can use numbers to get to
+specific heading levels once you know a page’s layout.</li>
+<li>If NVDA is too chatty on web pages, use the Document Formatting
+category under Settings to toggle extra verbage off.</li>
+<li>If a page has step-by-step directions you nmeed to follow, try
+making a recording with your phone or digital recorder so you can listen
+while trying out the steps on your computer. Remember, you can read from
+your cursor location to the end by pressing caps lock plus a with laptop
+mode or the insert plus down arrow in desktop layout.</li>
+<li>Clickable elements are activated when you press Enter on them but
+you cannot navigate between them with the tab key.</li>
+<li>Sometimes a website is actually accessible but just confusing.
+Remember sighted people find some websites confusing as well.</li>
+<li>You can always type or paste an address in to the Run Box if you
+want to call up your default browser and be immediately on the page you
+want.</li>
+<li>In web-based apps, you will often need to switch frequently between
+browse mode for reading and focus mode for interacting due to the more
+interactive nature of web-based apps.</li>
+<li>Many web-based apps will show you a list of keystrokes if you press
+Control-Slash.</li>
+<li>When you are asked to upload a file with drag and drop, locate the
+file on Windows file explorer, press Control-C to copy it and return to
+the drag and drop location and press Control-V to paste the file.</li>
+<li>The keystroke Alt-D takes you to the address bar, which is
+highlighted so you can copy the URL.</li>
+<li>If a page doesn’t seem usable, copy its address, and paste it in to
+a different browser to see if you can better read it there.</li>
+</ul>
+<h3 id="copying-text-from-a-web-page">Copying text from a web page</h3>
+<p>All versions of NVDA let you use the NVDA key pressed with F9 to
+start a block of text to copy, then navigate to the end and press F10
+once to mark the end of the text or F10 twice quickly to copy it. You
+can also not copy it right away and simply mark it with NVDA-F9 and
+NVDA-F10.</p>
+<p>Newer versions of NVDA let you use the shift and arrow keys to select
+text and Control-C to copy, just like JAWS. However this method though
+more intuitive can be less convenient, as the F9-F10 method makes it
+easier to read the page and/or locate where you want to end the block to
+be copied.</p>
+<h3 id="advanced-surfing">Advanced Surfing</h3>
+<ul class="incremental">
+<li>To work with web-based applications like rich edit controls or media
+players, press the single-letter navigation key o. This moves to the
+next object; press Enter to activate it and focus inside of it.</li>
+<li>If you are inside an object, such as a media player or rich edit
+application, press NVDA+control+space to exit the object and return to
+browse mode. This is similar to disabling the JAWS applications
+cursor.</li>
+<li>NVDA+shift+f10 toggles “native selection” mode, which by default is
+off. When it’s on, if you hold the shift and use arrow keys in focus
+mode you are selecting text using the browser’s or web application’s
+ability to select text. This means you can preserve the formatting, for
+example, if you wish to copy a table from a website and paste it in to a
+word processor. Some web applications require this be toggled on. When
+it’s off, you are using NVDA to select text, which you can paste
+elsewhere, however all you will be pasting is text without any
+formatting.</li>
+<li>Shift-Comma moves to the start of a container, such as a list or
+table.</li>
+<li>If you are inside a container, press the comma key by itself to move
+outside the container.</li>
+<li>The advanced surfing keystrokes are particularly useful for online
+courses and web-based applications.</li>
+</ul>
+<h2 id="possible-homework-ideas">Possible Homework Ideas</h2>
+<ul class="incremental">
+<li>Research the synthesizer ring, see section 12.1.4.</li>
+<li>Practice using both accessible and more complicated web pages. Be
+prepared to ask questions.</li>
+<li>If you use JAWS, try exploring the Bits pages with both JAWS and
+NVDA. What differences do you encounter?</li>
+<li>Research the concept of profiles. Why would you use them? Sec
+section12.4.</li>
+<li>Research Section ten on content recognition. How does it work?</li>
+<li>Research the concept of input gestures. What keystroke could you add
+to do more single-letter navigation on websites?</li>
+</ul>
+<p>Next week: Object navigation.</p>

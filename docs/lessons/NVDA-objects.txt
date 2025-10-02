@@ -1,0 +1,480 @@
+Where Am I In Windows
+An In-depth Informal Tutorial 
+About navigating Windows Using NVDA
+
+
+I had the unfortunate experience of working in a job with sighted folks when Windows first came out and I used the very first Windows screen reader: Slimware WindowBridge. I was in tech support helping sighted customers and it was at first very frightening. At that time, we were all learning Windows together, so being blind was less of a limitation than I at first thought it would be. After that, I was hired to support the ill-fated ScreenPower for Windows, (which its Baum-based German inventor called Virgo and TeleSensory simply renamed.) Virgo could only do object navigation. Therefore, I'm very clear on the concept. So I'm going to try to explain it along with the more basic navigation concepts.
+
+I feel it is a whole lot easier to wrap your arms around object navigation if you learn it as part of the entire NVDA navigation paradigm. So this is what I attempt to do in this tutorial. 
+
+Chatting About Cursors
+
+ Sighted people actually have three pointers, or cursors when they work within Windows. First, they have the mouse pointer. It can be a square, a highlight or have some crazy shape -- and it can be made prominent for low-vision folks. Early versions of JAWS changed the mouse pointer to a shark fin. The mouse pointer also turns in to an hourglass when the user needs to wait for some process to complete. It points to where the mouse is located onscreen. Of course the mouse is actually physically sitting on the computer desk, but its position onscreen is always pointed to by some indicator.
+
+Sighted people also have a blinking cursor -- sometimes called an insertion point. But this appears only when they are working with text they can edit. They see cursors on web pages in edit fields only. They see cursors in text editors and word processors and dialog boxes requesting text-based input, such as when they are prompted for their name or credit card number.
+
+Though the cursor can appear as a caret, it can also display as an underline or a little box. Some programs let you choose the cursor shape.
+
+The third pointer sighted people have is the concept of focus. There can be lots of tasks running and many will have their own windows. But only one window and only one object in that window has focus. It is not always visually obvious what has focus, but clicking in a particular window immediately brings the focus there, so sighted people care about this much less than we do. The title bar of the currently active window is often highlighted, indicating that it is the active window. Within that active window the elements that comprise the window are called controls and one of them may or may not have the focus. 
+Focus also indicates to which object the next keystroke will apply. Sometimes there's a faint underline or a little dotted box around a control, showing it has keyboard focus. I asked my sighted husband who says over the years, it's become more difficult visually to figure out what control has keyboard focus. As a windows programmer, he is careful to insure that each control he creates in his programs can get keyboard focus, but you'll find many modern apps simply do not give keyboard focus to all their controls. This is the biggest reason some software is inaccessible. 
+
+As a historical aside, in the early days of Windows, National Braille press republished a book titled "Windows From the Keyboard" which was originally written for sighted people. The mouse was a new concept then, so Windows programs were more standardized and keyboard access was built in to most of them.
+
+The active window might be your email program. The active pane might be the inbox (a pane is a portion of a window.) The active item might be the currently selected message in a long list of email messages. And your keyboard focus is pointing to that message in the list while your general focus is the email program and its inbox.
+
+Sighted people use their eyes to look at various parts of the screen. So the mouse pointer might be on the third paragraph, the cursor might be pointing to the second sentence and someone's eyes might be reading the first line of a document. In our email example, the sighted people may not even be looking at that list of messages, but instead be reading the message in the preview pane, which they've set to appear to the right of the selected message. The focus isn't in that pane, but their eyes are there. 
+
+My husband reads his email this way. Using the scroll wheel, his mouse is positioned in the list of messages, while his eyes are focused on the preview pane. He scrolls down through the list and the preview pane changes to show a portion of each new message as his mouse pointer crosses it in the message list. It is his eyes whose focus is on reading email while his mouse pointer is in the message list. He does not worry about the Windows focus. If he wants to read the entire message, he will then click on it in the list so a new window opens with the entire text and pictures in that message. 
+If you've used JAWS, you know it has five cursors: the system, JAWS, invisible virtual and touch cursor. The purpose of these different pointers is to add extra power to navigation. The system cursor points to items that have focus; the JAWS cursor points to where the mouse is located. The virtual cursor points to where the screen reader is located in a buffer while the invisible cursor points to any place onscreen where you could potentially move the mouse. The touch cursor points to where a user could touch and works even when you don't have a touchscreen. 
+
+NVDA does not have all these cursors, but it does give you the same navigation flexibility -- it's just a different way of looking at it.
+The system focus is where you are located in the active window. It's where the program you are running thinks you are located. It might be a real cursor (an insertion point) in a document and it might be something that has keyboard focus like a control in a dialog box. NVDA and JAWS behave the same way with the system focus.
+In NVDA the navigator object is a pointer that you control and it can move anywhere throughout a hierarchy of objects which is the geeky part of the Windows interface. NVDA also has a text review cursor that in many but not all cases can review screen content. 
+
+Besides having a real cursor or a specific focus, screen readers have adopted the concept of a cursor to also track where they are virtually located. Think of the sighted person looking at a portion of the screen while the focus is elsewhere. The NVDA navigator object is a pair of eyes that can move freely within the Windows environment. NVDA's browse mode cursor is similar -- it tracks where NVDA is on a web page, just like the JAWS virtual cursor. Web pages normally do not have a visible cursor so the screen readers had to invent a browse mode or virtual cursor so you could read them easily.
+NVDA's text review cursor is always positioned somewhere in the current object or if you're using screen review mode, somewhere on the screen, but again, it has no visual equivalent. These "cursors" are concepts specific to the screen reader paradigm.
+
+In summary, NVDA tracks the system focus, the object navigator, the browse mode cursor and the review cursor. To fully know where you are, you might need to know where all these pointers are located.
+
+If the review cursor always follows the focus, that is, if it is tether there, then they will point to the same place.
+
+On a daily basis you pretty much use keyboard focus and an editing cursor; you only need to worry about all these other pointers if you're trying to get to a control that doesn't have keyboard focus, or read some text you cannot access with the keyboard. Or sometimes you want to keep your focus on one control while reading elsewhere onscreen. 
+
+When I read email, I don't worry about object navigation. I scroll through my message list using my arrow keys and keyboard focus is on the current message. I press enter to open the window with the message, and now my browse mode cursor takes over letting me use the arrow keys to read the message content. 
+
+However if I wanted to click on some feature in the email program that I could not access with the keyboard, I might use object navigation to locate and activate it. Or, perhaps I wanted to read a message that I could not get to with the keyboard, then I'd want a way to navigate there. 
+
+NVDA knows where the mouse pointer is. It knows where the cursor is. It knows where the general focus and the corresponding keyboard focus are, if the programmer actually provided keyboard focus for a particular control. And NVDA's navigator object may or may not be in sync with one of those items, depending on whether you moved it with object navigation or set NVDA to have it tether, that is follow the other pointers I've discussed. 
+
+What are Objects, anyway?
+
+In Windows, everything is an object. They are arranged hierarchically, that is, objects contain objects. When you save a file a dialog box opens. That's an object. It contains objex like the edit box where you type the file name, the list that shows the files in the current folder, the list that shows the file types you can save it as and the search box where you could locate a different folder. All these are objects inside the larger dialog box object.
+In a list the items in that list are objects while the list itself is the parent object and the window that contains that list is the parent object to the list object. Sighted people are actually unaware of this hierarchy as they see only what is currently on their screens. But we NVDA users can access all the objects that Windows makes available to external programs: we are not limited by what is currently visible. This does of course add complexity but it also adds power.  
+
+So where in the heck are you anyway?Before you navigate, you need to know where you are at.
+
+Where Am I?
+
+Read Title Bar	NVDA-T
+Read Status Bar	NVDA-End
+Read current line	NVDA-Up Arrow 
+Read line pointed to by review cursor	NVDA-Numpad 8
+Read Word pointed to by review cursor	NVDA-Numpad 5
+Read Character pointed to by review cursor	NVDA-Numpad 2
+Read review Cursor Location	NVDA-Numpad Delete
+Read what's selected	NVDA-Shift-Up Arrow
+Read current window	NVDA-B
+Read current Focus	NVDA-TAB
+Read Navigator Object	NVDA-Numpad5
+
+These keystrokes tell you where you are and where NVDA's various pointers are also located. 
+
+What About the "Where Am I" laptop keystrokes?
+
+Read Title Bar	NVDA-T
+Read Status Bar	NVDA-Shift-End
+Read current line	NVDA-L
+Read line pointed to by review cursor	NVDA-Shift-Period
+Read Word pointed to by review cursor	NVDA-Control-Period
+Read Character pointed to by review cursor	NVDA-Period
+Read review Cursor Location	NVDA-Delete
+Read what's selected	NVDA-Shift-S
+Read current window	NVDA-B
+Read current Focus	NVDA-TAB
+Read Navigator Object	NVDA-Shift-O
+
+Reading the title bar, current focus and entire window use the same keystrokes regardless of whether you use the laptop or desktop keyboard layout.
+ 
+Note how there's a distinct pattern with the screen review reading, always occuring when NVDA is pressed. Period by itself reads the current character. Period with control reads the current word. Period with Shift reads the current line. We'll see this pattern unveil itself more with the previous and next movement commands in review. 
+
+Move to Previous Item
+
+Since we have several pointers, we have several ways to move backwards or to the previous item.
+
+The easiest way to do this is by using the left and up arrow keys.
+
+To move left to the previous character, use the left arrow key.
+To move left to the previous word, hold control and press the left arrow.
+To move up to the previous line, use the up arrow.
+To move to the previous sentence, hold the alt and press the left arrow.
+To move up to the previous paragraph, hold control and press the up arrow.
+
+All these keystrokes move your system cursor and your system focus. NVDA often calls the system cursor the caret or applications cursor; they are synonymous. Except for the sentence navigation, they are all Windows keystrokes. Sentence navigation works only in applications like Outlook, some browsers and Microsoft Word that support it.
+
+These keystrokes also function to move the keyboard focus on occasion even if you have no cursor. For example, moving with the left arrow in menus often goes to the previous menu item. Sometimes, especially on ribbons, it goes to the previous control, or in a group of items, it goes to the previous item in a box where shift-tab takes you to the previous group and Shift-F6 to the previous pane. 
+
+To move left to the previous column in a table: Hold Control and Alt and press the left arrow.
+To move up to the previous row in a table: Hold Control and Alt and press the up arrow.
+
+These keystrokes are also specific to NVDA and work whenever a table is located such as in a document or web page. They are not Windows keystrokes.
+
+In Excel, the left arrow moves to the previous column, the cell to the left. the up arrow moves to the previous row, the row above. This breaks tradition with normal arrow key usage because Excel has redefined the normal usage of the arrow key. If you have to edit the contents of a cell in excel and get the arrow keys to move within that cell, you need to press F2so that you are actually editing that cell.
+
+In email programs, up arrow typically goes to the previous message in a message list. And left arrow goes to the previous something, but that something depends on how the programmer defined the left arrow key.
+
+And in File explorer, your up and left arrow movement is different depending on whether you've set your files to display as a grid or list. But that's getting off-topic for this discussion!
+
+Notice though that none of these keystrokes use the NVDA key. This clues you in to remembering that they all move the system focus or cursor. And most of them are windows keystrokes.  
+
+The Shift-Tab also often moves to a previous control, but not always. It really depends on whether the programmer made that application keyboard accessible.
+nd that's also way the windows keystrokes cannot always navigate to the previous item. The application may not enable the keyboard to do this. Because a pair of eyes can roam around the screen reading anything without necessarily having to focuse on it, programmers don't have to make everything keyboard accessible. After all, they can read visually just fine.
+
+Now, what if you want your system focus and cursor to stay put while you explore the text? Perhaps you missed something NVDA previously read. This is where NVDA's text review keystrokes come in to play.
+
+Or perhaps you are using a pesky application that does not allow your keyboard to move you to a previous item.
+NVDA distinguishes between the concept of text review and screen review. Screen review is a mode, which may or may not be on. Text review is something you can access always, but as I'll explain later it behaves differently depending on which review mode is engaged. 
+
+Move up to previous line	Numpad 7.
+Move left to previous word	Numpad 4.
+Move Left to previous character	Numpad 1.
+
+The NVDA text review cursor cannot move by paragraphs or sentences. 
+
+Now what if you want to move to the previous item in the hierarchy? You have the previous object which is the sibling to your current object. You also have the parent, or containing object you can move to. When you move with object navigation, you are using the navigator object and your system cursor remains in place. Your focus does not change. Your text review cursor however moves so that if needed you can review text within the new navigator object.
+
+Remember, I said the navigator object is like a pair of eyes. But it can move through the entire Windows hierarchy not just what's on the screen. But like a pair of eyes,  it does not change where your dfocus is actually located.
+Move to previous sibling	NVDA-Numpad 4
+Move to containing object	NVDA-Numpad 8
+
+This is where the pattern is kind of broken. The numpad 4 is text review to move to the previous word and the NVDA key pressed with the numpad 4 moves to the previous sibling object. But it's the numpad 7 that moves to the previous line in text review, whereas the NVDA key pressed with Numpad 8 is what you need to navigate to the parent or containing object. I believe this was done because for text review, the NVDA developers wanted the leftmost key on the numberic keypad to move to the previous item so they made 7 move by line, 4 move by word and 1 move by character. They wanted the moves to progress from larger at the top of the numeric keypad to smaller closer to the bottom.
+
+The NVDA developers were all geeks who in my humble opinion spent way too much time with the Linux screen reader which uses this same text review pattern. Note it's a different pattern from the way JAWS uses the numeric keypad.
+
+Anyway, since you might use the numeric keypad 5 to locate your navigator object, it makes sense that numpad 4 goes to its sibling on the left while the 8 directly above the 5 goes to its parent. This is how I remember which key to use, anyway! 
+
+For example inside a list, navigating to the previous sibling moves to the previous item in that list. But navigating up to the containing object moves to the list itself. If you moved to the object containing the list you might be in a dialog box or in the entire window that contained that list. 
+
+Voiceover users on the mac know they must interact with an object sometimes to utilize it. Starting interacting is like moving inside an object, and stopping that interaction is like returning to its containing object.
+
+In notepad, if I move left, I find outside of my text there's the controls for the actual window, the menu and buttons to minimize, maximize and close plus the vertical and horizontal scroll bars. Moving up the hierarchy, I eventually get to the desktop. Moving left I can find other items like the taskbar and notification area, sometimes called the system tray.
+
+So we've learned how to move the system focus, what JAWS calls the PC cursor. We've learned how to move the object navigator. And we've learned something about text review.
+But NVDA actually has three review modes:
+Rotor to next review mode: NVDA-Numpad 7
+Rotor to previous review mode: NVDA-Numpad 1
+
+Remember pressing the numpad 7 by itself is the text review command to move to the previous line whereas holding the NVDA key and pressing Numpad 7 goes to the previous review mode. Unfortunately it doesn't wrap so if you are already in object review, you need to press NVDA-Numpad 1 to go to the next review mode, screen review. 
+Note: the document review choice doesn't appear on that review mode rotor unless it's possible to enter that mode which occurs only if there's a whole document that NVDA can access. This depends on whether the application itself makes the document object model available to NVDA. Otherwise you are limited to Object navigation and screen review as the two modes for exploration while your system focus stays put.
+ When your mode is set to screen review rather than object review, NVDA atempts to let you review just what is on the screen with the tex review keys. For example if I went to the previous word in object review, I'd press the numpad 4 and I'd be reviwing the neprvious word within the navigator object. But if I was in scren review mode I'd be reviwing the previous word on the screen. 
+
+A few Words On Document Review
+When you are in browse mode, that is a virtual cursor is active, then document review is available because NVDA can see the entire document and not just what's currently on screen.
+
+So if you are in object review mode, your text review commands, the ones you use to move by line word and character without disturbing the focus work only within the current navigator object. But if you are in screen review, they attempt to review everything they can find onscreen. This too is frought with problems, since not all programs obey the windows standard for writing to the screen. A well-behaved program though will follow Microsoft guidelines for accessibility and NVDA's screen review will work perfectly there. 
+
+Note that the object navigation keystrokes work no matter what review mode you are in, but it's the text review commands which behave differently. So you can navigate by object to your heart's content but when it comes time to use those text review keystrokes, you need to be sure you are in the mode you expect.
+
+In notepad, for example, text review lets me look at the text a character, word or line at a time without loosing my place. But if I switch to object review mode, now text review is stuck within whatever object I last navigated to using object navigation. So if I'd gone over to the system tray in my explorations, now the text review keystrokes would not be reviewing my notepad text; instead they'd be reviewing the object inside the system tray by line, word and character. 
+
+And to further make this confusing, remember the review cursor and navigator object can be tethered to and follow the system focus if you choose to do so, or untethered as you move around. The review cursor also follows the navigator object and that cannot be toggled off. So whether your navigator object moves because you've got it tethered or because you went exploring with object navigation, plus whether you enabled screen review or object review mode will affect your results with the text review keystrokes. So if you aren't getting the results you expect with the text review keystrokes, use your Where Am I keystrokes to figure out where your focus, navigator object and review cursor are actually located. Good think sightlings don't need to query their brain where their eyes are!
+
+With great power comes great complexity, sadly! 
+
+If you want the object navigator to return to a known location, you can press NVDA-7 (the regular 7 not the numpad 7) and that will grab the navigator object like a magnet and slap it back in to the system focus. Or at least it will slap it back in to the object with system focus. You can press NVDA with the 6 key on your regular keyboard (not the numpad 6) to teleport the review cursor back to where the caret, the application cursor is located. Do this before reviewing text or after you went exploring and got lost. These two keystrokes work in both desktop and laptop mode. 
+
+It appears that NVDA-7 also toggles the mode to tether the object navigator to the system focus and NVDA-6 toggles the review cursor to tether to the caret, but my experiments are not complete and the documentation is unclear. I believe if you press the key again, you now will find when you move the focus or the caret the navigator object comes unglued from the focus and the review cursor comes unglued from the caret. If you have an application which can change the focus without your interaction you can park the review cursor and navigator object someplace and they will not be disturbed. I do not have an application running with which I can test this out so your mileage may vary. Perhaps I'll ask about it on the NVDA list, since I'm unsure how these keystrokes differ from using settings to decide whether the object navigator follows the system focus and the review cursor follows the caret. I have however confirmed the review cursor does follow the navigator object no matter whether I tether or untether!
+
+The laptop navigation keystrokes also follow a pattern that for me is less easy to memorize than the usage of the numeric keypad. But it's a pattern, nevertheless. Remember here the system focus and applications cursor do not move.
+For text review:
+Move to previous line	NVDA-Up arrow
+Move to previous word	NVDA-Control-Left Arrow
+Move to previous character	NVDA-Left arrow.
+
+Remember how we saw the same pattern when reading the current line, word and character using the period key? So you can now memorize period is current and up arrow is previous with the laptop mode. Remember how NVDA-Period read the current character, making it easier to remember NVDA-Up arrow moves to and reads the previous line and NVDA-Lef arrow reads and moves to the previous character. Remember NVDA-Control-Period reads the current word, so logically NVDA-Control-Left arrow moves to and reads the previous word. 
+
+If you use the left arrow by itself, you are moving the application cursor left a character. If you use it with the NVDA key you are moving the text review cursor left by one character. 
+If you use the left arrow with the control key, you are moving the applications cursor left by a word. But if you use the Control and left arrow with the NVDA key you are moving only the review cursor left by a word.
+If you use the up arrow, you are moving the caret up a line. But if you use the NVDA key with the up arrow, you are moving the review cursor up by a line.
+
+And though control and up arrow move the system cursor up a paragraph, since text review can only handle characters, words and lines, the control and up arrow with the NVDA key pressed in laptop mode does nothing. 
+
+Remember this is all only true with the laptop layout. On the desktop, since heavy use is made of the numeric keypad for both text review and object navigation, your keyboard arrows with the NVDA and control key are available to adjust synthesizer settings.
+
+Now if you are in laptop mode and used to pressing insert-Up arrow to read the current line with JAWS, you'll find NVDA often says "Top". This is because you are in object review, and NVDA is at the top of the navigator object when you try to move the text review cursor to the previous line. So you need to rotor to the next review mode, Screen review for NVDA to stop being confined to the navigator object. So you press NVDA-PGUp to rotor to the previous review mode, or NVDA-PGDN to rotor to the next review mode. 
+
+And, if you are not fooling with this object nonsense at the moment -- your intent was to read the current line, then the keystroke you want is either the numpad 8 or NVDA-L -- think L for line. Note that in desktop layout, the NVDA key with the up arrow does read the current line. But because it's the current line in text review, you must be sure review is actually where you think it is. 
+
+
+Moving To the Next Item
+
+First, we start with the focus, the system or applications cursor, the caret. 
+Move right to the next character: Right arrow
+Move down to the line below: Down Arrow
+Move right to the next word: control-Right Arrow
+Move down to the following paragraph: Control-Down Arrow
+Move to the following sentence: Alt-Right Arrow
+
+Sentence navigation works only in applications that support it. And the arrow keys often also move the focus within menus, ribbons, groups of buttons and other focusable elements.
+
+For example, pressing the down arrow (and the up arrow too) often navigates through and automatically selects the focused radio button on a web page, when you are in focus mode.
+
+We use the down arrow to move through a web page in browse mode as well -- we are navigating with the browse mode cursor that NVDA creates to make a web page easy to navigate. When screen readers for Windows and browsers first appeared, you had to read the screen as an entire unit, because the web itself had no cursor. Now browsers too have a caret you can turn on, but that makes little difference for the screen reader user.
+
+Tables too have the navigation keystrokes we looked at before:
+
+Move down to the following row, remaining in the same column: Alt-Control-Down Arrow
+Move right to the following column, remaining in the same row: Alt-Control-Right arrow
+
+We also use the down arrow to navigate forward through lists, like list boxes on the web or message lists in our email program. We use the right arrow to increase the value on a slider, for example when skimming through a video or audio track or adjusting the volume of our speakers. And of course the up arrow is going to move the slider up -- making the volume softer or moving backwards through a list.
+
+There's one more wrinkle with the down arrow. On a drop-down list box or a combo box, hold the alt and press the down arrow to open it. Visually a regular list box displays as, well a list. But a drop down list box simply has a little arrow you click to open, or expand the list it contains. Sighted people do not see the list untill they click the arrow. And we have to press alt-down arrow to make that list open for us too. This is a Windows keystroke.
+
+Remember none of these keystrokes use the NVDA key. This reminds you they all move the system focus or applications cursor. 
+
+But as I said previously, you have text review at your disposal all the time; it behaves differently whether it's using review mode to look at the entire screen or object navigation to look only at the current navigator object.
+
+Move down to previous line: Numpad 9
+Move right to following word: Numpad 6
+Move right to next character: Numpad 3
+
+We've now completed our mental picture of the numeric keypad grid. From left to right the movement is previous, current and next.
+From top to bottom, it's line, word and character. 
+the numpad 9 is the top left and the numpad 3 is the bottom right of this grid.
+
+And for all these text review moves, we are not using the NVDA key. We're just using the numeric keypad with the numlock turned off. If we turn it on, it goes back to being a number pad.
+
+Again, object navigation which is available to you at all times breaks the pattern somewhat. To move to an object sibling on the right, you'll hold the NVDA key and press numpad 6. And to move inside a parent object, you'll hold NVDA and press the numpad 2, right below the 5.
+
+Remember that with the NVDA key held down the Numpad 8 goes to the parent and the numpad 5 announces the current navigator object. Numpad 2 assumes that object you heard the numpad 5 key announce is the parent, and so NVDA with numpad 2 moves inside that object. 
+The key reference for NVDA says it moves to the "first contained object" but all that means is that it moves inside the parent. And it positions your navigator object on the first or leftmost object inside.
+
+By the way, parent, child, sibling are all programmer terms for object models. Object models show up everywhere in programming these days. NVDA, in attempt to be more user friendly coined the term containing object but I find that more confusing because there's containing and contained which sound almost alike.
+
+One ergometric point: if you like the numeric keypad, be sure the numpad insert is one of your NVDA keys. You can then hold down NVDA with your thumb to perform object navigation with your remaining fingers. Lift your thumb to do text review. Very nice!
+
+It's a good idea to practice object navigation when you don't need it. Pull up a few programs with which you are familiar and never needed to use with any fancy features. Then explore using these NVDA keys. Once inside an object, try the text review keys.
+
+The day will come when you are stuck using an application, where you really do need to use this stuff. In my job I use a hateful application called Clockwork that has just enough keyboard shortcuts to claim it is accessible. But there are so many things I need to do with this program that cannot be accomplished with the keyboard.
+
+One place in Windows where you can have fun with object navigation and text review is the Windows settings application. As you tab through settings you only hear the object that gains focus. But there's more onscreen than that. Control panel is also a good place to explore, and so are Windows store apps, though many aren't properly designed.
+
+I also did some exploring on the web, where document review is the third review mode that is made available. Do remember to switch review modes if you don't seem to be getting anywhere with text review. If you are planning on taking online classes, mastering document review and object navigation can be enormously helpful. I have learned not to wait for a work or school deadline before I practiced navigating an app or website I might need to access with minimal delay.
+
+It's also good to take a second look at NVDA-6 and NVDA-7 -- numbers on the regular number row, to toggle whether the navigator object and review cursor follow the focus and the caret. I discovered that if I have the caret and the review cursor in sync I can review fine until I actually move the caret; then the review cursor jups back to where the applications cursor is. And if I unlink it, I can then park review somewhere, for example to monitor a status line or the percentage on a long running task like a virus scan or disk cleanup. Object navigation though does always seem to grab the review cursor and haul it along with it. And I can link and unlink the navigator object too, but unless my focus moves, the navigator object won't be returned to the focus so I can explore without that happening.
+
+We now come to the laptop keys which follow the pattern of moving to a previous unit. 
+
+For object navigation:
+Move to next sibling: NVDA-Shift-Right arrow
+Move to child object (or object inside the current navigator object): NVDA-Shift-Down arrow
+
+NVDA and Shift keys are what you use in laptop mode to move the navigator object around, up to the previous level, left to the previous object, right to the next object. And then we have NVDA-Shift-Down arrow which follows the pattern and moves down to a lower level or you might better think of it as inside the navigator object.
+
+If you had three list boxes in a larger dialog box inside a word processor window, say to configure settings, then the word processor window is the parent object. Below it the one dialog box as its child. The dialog box is also a parent. The three list boxes inside are its children and they are siblings of each other.
+Each list box has children of its own, list items. So if you navigated all the way down to a list item, you'd be inside a list which is inside a box which is inside a window. 
+
+Programmers call this a tree structure, because trees have limbs which stick out of the trunk, and smaller branches branching out from those limbs as you climb higher. The folder, or directory structure in Windows is also a tree structure. 
+
+For text review:
+Move to following line: NVDA-Down arrow
+Move to next word: NVDA-Control-Right Arrow
+Move to next character: NVDA-Right arrow.
+
+This is the same pattern as when reviewing previous text. The control held with NVDA and the left or right arrows moves by words while the control and NVDA with the period announces the current word. The NVDA key held with the left or right arrow moves by previous or next character. NVDA held with the up or down arrow moves the review cursor up or down a line. 
+
+Notice that in desktop mode, NVDA-Down arrow, just like JAWS, triggers say all. This is why in laptop mode, Say all is activated with NVDA-A. The developers had to stick with some sort of pattern for text review and this is why it works this way.
+
+When you use down arrow by itself you are doing the most basic thing in Windows: moving your focus to the following line. But if you hold the NVDA key with down arrow, you are moving text review forward a line. And if you hold NVDA with Shift and down arrow you are moving inside an object, just as Mac users know to go inside an object to interact with it using the Mac's voiceover. 
+
+It bears repeating that you need to use the Shift key in laptop mode if you want to fool with the synthesizer settings: remember they were NVDA-CTRL-Shift arrows? That's because NVDA-Control-arrow is used for text review.
+And though control and down arrow move the system cursor down a paragraph, since text review can only handle characters, words and lines, the control and down arrow with the NVDA key pressed in laptop mode does nothing. 
+
+Now that you can move to an object and even use text review to position yourself precisely, how do you activate, or click on it? Why and how would you drag the mouse?
+
+I'm going to do some experimenting with all this today and try to get in another post tomorrow.
+
+I'm finally truly wrapping my arms around how NVDA works. Today, I want to take a look at making things happen.
+
+We navigated our way through the Windows hierarchy moving through its three dimensions. You'll notice the screen has two dimensions; you can go up, down, left or right. But you cannot go in and out.
+
+Object nav is a universe where up is actually moving outwards and down is moving inwards, if that makes sense. It is as if each time you took a step forward, you'd be climbing stairs to an upper level and each time you stepped backward, you'd be descending to a lower level. This is why it is represented as a tree rather than a flat surface.
+
+All this navigating lets us review text, often using the text review commands in many places other than our current focus. But all we could do was read!
+
+Now it's time for some action. Sighted people read too, and when they want something to happen, they mouse there and click, or on a touchscreen, they simply touch. With the keyboard, you'll have to issue yet more commands.
+
+Each object has a default action. This action occurs usually when it is touched, or clicked, or if it has keyboard focus when enter or space are pressed. 
+
+To perform that action on the navigator object, hold the NVDA key and press Enter on your numeric keypad. That is all you need to do. It is the lowest right-most button on the keypad.
+
+You'd want to do this if you need to click on something and the object appears to have no default action; that is pressing the Numpad Enter with NVDA had no effect. And of course, you'd only do this maneuver if you couldn't get to that control using the keyboard which in most cases is much easier.
+
+For our next group of keys, you need to know their layout on your numeric keypad. Mine is pretty standard, so the NumLock is above the 7 and the slash, which NVDA calls divide, is above the 8. Therefore, the slash is directly right of NumLock. The star or asterisk key, which is also sometimes called multiply is to the right of the slash, directly above the 9. And to the right of the asterisk is the minus key which is above the plus key. The plus key is bigger and is to the right of the 9. 
+
+These are keystrokes you mostly use with the mouse. But one keystroke does not affect the mouse and that's the NVDA key held down with the minus key. This keystroke teleports your navigator object back to the focus. It's useful if you went exploring and want to return home so to speak. Think of moving your finger to the far right of your numeric keypad as taking the object navigator back to home base.
+
+Move the mouse to the position of the Navigator object-- Hold the NVDA key and press the slash key. You can find it easily by moving your finger above the 8. 
+
+Left click the mouse: Simply press the numpad slash. So remember, hold the NVDA key and hit the slash to get the mouse positioned, then tap the slash without the NVDA key to click that mouse. Tap the slash rapidly twice to double click.
+
+Maybe you need to right-click that object to get a context menu. If you can get to a control with the keyboard, it is much easier to hit your applications key or Shift-F10 to activate its context menu. But if your application is mouse-centric, you'll want to know another keystroke:
+Click the right mouse button: Hold the NVDA key and press the asterisk.
+
+You can find that key by moving your finger above the 9.
+
+Now what if a sighted person parks your mouse where you need to click and you want to see that area in more detail? You'd then
+Move object navigator to mouse location: Hold NVDA and press the asterisk.
+
+So the slash with the NVDA key moves the mouse to the navigator object. The asterisk with the NVDA key moves the mouse to the navigator object. 
+
+Notice too since the review cursor tags along with the navigator object, it also moves there as well. 
+
+The slash by itself is your left click and directly to its right, the asterisk or star key is your right click. 
+
+Last, let's talk about drag and drop. Sighted people drag the mouse to move things around onscreen. Windows and their separate panes have little handles they can drag to adjust their screen layout. Dragging is done when they draw shapes, or draw a box around something they want to select.
+
+Most commonly dragging is done to highlight something, the same thing you do when selecting text with your shift key held down.
+
+Many times dragging is done to rearrange items in a list, or make an onscreen grid bigger or smaller, or hide an item in a grid -- it is drug out of sight to the virtual realm outside of the screen.
+
+To drag, the sighted person holds the left mouse button while clicking. Then, while continuing to hold the button, the mouse is moved and the object they are dragging comes along, or the highlight spreads out over what's being dragged. When they reach their destination or they have highlighted what they need to select, they "drop", that by releasing the mouse button.
+
+I used to support software which required drawing little boxes around items. It was hard for sighted people to get the hang of it because they kept releasing the button too soon or moving the mouse too far or not far enough. I was much faster with the keyboard because all I had to do was mark the start of the box, the upper left corner and then arrow down to where the right corner needed to be and press a button for the app to draw for me. But I could never convince sighted people to use the keyboard! This keyboard feature was not for us blind people; it was to make dragging easier for the sighted who never learned how to use that feature.
+
+For another example, in my job I use in-house database software that fills the screen with about seventeen columns of data. If I want to read just a few items in a row, I have to listen to lots of extra clutter. But the only way to hide columns was to drag them offscreen. I spent hours with a sighted co-worker instructing her how to drag them, cursing the application developer who hadn't simply made it possible to select an item in the grid and choose "hide" from a context menu. Then I learned how to drag and drop, first in JAWS and now in NVDA, and I was able with some difficulty to hide those columns myself when the software got updated and all my co-worker's efforts got erased!
+
+Where I often need to drag and drop is in lists where items need to be reordered -- for example the SoftPhone I use in my job has a headset and a speakerphone icon and if I want to use one instead of the other, I have to drag one above the other. It's super annoying.
+
+To drag the mouse with NVDA, you first lock the left button. Do this by holding the Shift key and pressing the slash. You don't need the NVDA key here.
+
+Now you can physically move the mouse or you can use the NVDA-Slash to move the mouse to your navigator object. So you'll have to position the navigator object first before you start dragging.
+
+Your last step is the "drop", that is you unlock the mouse button. It's a toggle, so simply press the Shift key and the numpad slash again.
+
+The complete steps are:
+
+1) Use object navigation to locate where you want to start dragging. You might "go home" first by holding NVDA and pressing Minus so you're at the focus to begin. But you need to get your navigator object to the place where dragging begins.
+2) Use the NVDA-slash to get your mouse parked there.
+3) Hold the Shift and press the numpad slash to start the drag.
+4) Use object navigation to locate where you want the drag to stop -- the destination of the object you are moving or the place where you want the highlight to end.
+5) Again use the NVDA-Slash to position the mouse to the navigator object's new location.
+6) Hold the shift and press the slash to unlock the mouse and complete the "drop" of drag and drop.
+
+Note that some applications require you first click before starting a drag. This trips sighted people up too -- they can't figure out why dragging isn't working because the app needs them to click first and then begin the drag.
+
+There are times when all this mousing won't work. Drag and drop works only if the two objects are visible onscreen, something you might not know since object navigation can roam beyond those limiting borders. Microsoft has gotten very strict with developers about how much third-party software can control the mouse in order to increase security. Imagine if a virus could just grab your mouse and start clicking on things.
+
+Another reason it might not work is because not all Windows software developers bother to use the offscreen model or the User interface automation (UIA) model which is nnewer . They can paint directly to the screen and not inform Windows they are placing objects there. So if this occurs, then Windows itself doesn't fully know what is onscreen and therefore NVDA doesn't know either.
+
+If you ever have contact with a programmer who has done this, you can use Narrator's developer mode to show them what's happening. In Narrator -- not NVDA but Narrator -- press the Narrator key and the F12 key.
+
+This does nothing for you, but visually everything that narrator cannot see disappears off the screen! It immediately shows the sighted what controls are visible and not visible to a screen reader. Don't tell the sighted person it's a toggle, you can press it again to get the screen content back, but it might be fun for you to observe the sighted developer try to use the software with half the screen made invisible.
+
+By the way, if you are ever asked to drag and drop a file, such as in an upload prompt on the web, you don't need to. Instead, find the file in file explorer and press control-C to copy. Then go to where you're expected to drag it and press control-v to paste. On the web, you often must click browse and in the edit field for filename, you can paste right there.
+
+
+So now we'll look at the laptop keystrokes that let you do something with objects you've navigated to.
+
+First, you need to return to home base. In other words, you can move the navigator object back to the focus to get a starting point. 
+
+Return Navigator object to focus: NVDA-Backspace
+
+Think of it as going "back" home.
+
+Once you've located an object you want to activate, that command is NVDA pressed with the enter key. Your laptop has no numeric keypad so it's the regular enter key.
+
+Perform default action for current navigator Object: NVDA-Enter.
+
+I always forget these two keystrokes when I'm floundering in laptop mode. Probably need to practice more!
+
+Another keystroke I always forget it how to teleport the mouse to the navigator object so I can click on something. 
+
+Move mouse to navigator object: NVDA-Shift-N (n for next)
+
+The best way I know to remember it is to think about how you have to "next shift" the navigator object to the mouse's location before you can click!
+
+Once the mouse is at the location of the navigator object, you can now click it.
+
+Left Mouse click: NVDA-left bracket
+
+Remember the left bracket is to the right of the P.
+
+The corresponding right button click is therefore easy to recall.
+
+Right mouse button click: NVDA-Right bracket
+
+The right bracket is the key to the right of the left bracket. These are the square brackets.
+
+You might also want to move the navigator object to where the mouse is located. This is most useful if a sighted person has positioned your mouse for you and you want to explore that area. 
+
+Move navigator object to mouse: NVDA-Shift-M (m for mouse)
+
+The NVDA with the M by itself toggles mouse tracking -- whether NVDA speaks items the mouse is moving over. Holding down the shift with this command again is a clue you are "shifting" the navigator object to a new location.
+
+To lock the mouse buttons, think of controlling them.
+
+Hold the left mouse button: NVDA-Control-Left bracket
+Hold the right mouse button: NVDA-Control-Right bracket
+
+This is a toggle so you drag and drop with these keystrokes:
+
+1) Navigate to where you want to start the drag.
+2) Press NVDA-Shift-N to get the mouse to that location.
+3) Press NVDA-Control-Left bracket to hold the left mouse button down.
+4) Navigate to the destination.
+5) Press NVDA-Control-Right bracket to release the mouse button or "drop" the mouse.
+
+I think learning these keystrokes is a lot like learning to type or write Braille. You first think about it -- "Oh, the letter L is dots 1-2-3" or "The letter L is hit with my right ring finger, it's right next to the K key." But eventually, you think L and you simply type an L. You also begin to think combinations -- you think the word "Letter" and in Braille you've already entered LR without thinking more about it.
+
+I'm like that with JAWS. I want to do something and I don't have to try to remember the keystroke: I just know it. With practice, I think the same thing will happen with NVDA where I'll want to do something and my fingers will automatically fall in to the groove. But for now, I have my cheat sheets.
+
+There are a few moves I left out when practicing and explaining all these keystrokes. You can move to the top or the bottom of text you are reviewing as well as to the start and end of a line in review. You can also move the caret to the review position sometimes. You can do a Say All with the text review cursor and you can copy text from review to the clipboard.
+
+But that's a lot to memorize and there are plenty of more days in which that can be done!
+In my final post on navigation, I want to discuss bigger moves. 
+
+Go to top line of document: CTRL-Home
+Go to bottom line of document: CTRL-End
+Go to beginning of current line: Home
+Go to end of current line: End
+Go to previous page or screen: PG-UP
+Go to following screen or page: PG-DN
+These always move the caret, the applications cursor and the system focus is always linked to the caret. They are Windows keystrokes that work in every word processor and text editing application I ever used.
+
+The PGUP and PGDN keys are a little weird. In word they can actually move by pages if you configure that, but I believe by default they move only by screens. On my home computer they do, and I set my office computer to have those keystrokes move by page -- but I'd have to look up how I did it! And this of course applies only to Microsoft Word.
+
+The control pressed with the PGUP and PGDN also move by larger units, but that's application specific. Adobe reader uses these keystrokes to move by pages.
+
+And of course, Home, End, Control-Home and Control-End also do the expected thing in your browser but only if you are using a screen reader. The screen reader makes the web page appear like an ordinary document to make it easier to navigate.
+
+Anyway that covers how you get the applications cursor to make a big move.
+
+The cursor for NVDA's text review can also go the distance. 
+
+Move to top of review: Shift-Numpad 7
+Move to bottom of review: Shift-Numpad 9
+Move to start of line: Shift-Numpad 1
+Move to end of line: Shift-Numpad 3
+
+Here once again the pattern is followed. The numpad 7 by itself goes to the previous line whereas holding Shift with 7 goes as far previous as it can: to the top of the area being reviewed.
+The numpad 9 by itself goes to the following line, whereas the 9 with shift goes to the farthest forward it can, to the bottom of the area being reviewed.
+
+The numpad 1 goes to the previous character, whereas the Shift with the 1 goest as far left as possible, to the first character on the current line. And the 3 goes to the next character, whereas the 3 with shift goes as far right as possible: to the last character on the current line.
+
+Of course the area you are reviewing may be very small, just the current navigator object for example. Or if you are lucky, and you have screen review enabled, and it's a fully accessible application, NVDA will be able to review the entire screen.
+
+The laptop keystrokes follow a different and possibly easier to remember pattern.
+Move to top of review: NVDA-Control-Home
+Move to bottom of review: NVDA-Control-End
+Move to start of line: NVDA-Home
+Move to end of line: NVDA-End
+
+They mirror the keys to move the system caret except you have to hold down the NVDA key. 
+
+There are no extra keystrokes for object navigation. I used to support a screen reader that would navigate the hierarchy with bigger moves, but you really are not missing out, because you'd just have to memorize more. You can reach everything NVDA can see with the object navigation it provides.
+
+However review has a few surprises. You can do a Say all in review with the numpad plus, the big key to the far right directly above the numpad enter. If you want to do this with the laptop keystroke, it's Shift with NVDA and the letter A for All. Remember NVDA by itself with the letter A in laptop mode is Say all moving the applications cursor down as it reads.
+
+And you can select and copy text from review to the clipboard. You'd do this if you couldn't get to that text with the normal Windows text selection commands. Here's how:
+
+1) Navigate to where you want to start the copy.
+2) Hold NVDA and press F9.
+3) Move to where you want to stop the copy.
+4) Press NVDA-F10. This selects the text.
+5) Press NVDA-f10 a second time. This copies it to the clipboard.
+
+You cannot press CTRL-C to copy because Windows doesn't know you selected any text. That's why NVDA has to copy the text to the clipboard for you. This is great for capturing the text of error messages.
+
+This is also the technique you use to copy text in browse mode. And the F9 and F10 with NVDA work in laptop mode too.
+This concludes my tutorial on navigating with NVDA.
+
