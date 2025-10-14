@@ -1,0 +1,675 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BITS NVDA Course, Week 3 &#8212; NVDA Course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lessons/lesson_week03';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Week Four" href="lesson_week04.html" />
+    <link rel="prev" title="BITS NVDA Course, Week 2" href="lesson_week02.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1" />
+    <meta name="docbuild:last-update" content="Oct 14, 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NVDA Course</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Lesson Notes
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bit-acb/nvdacourse" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Lesson Notes
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bit-acb/nvdacourse" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Lessons</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lesson_week01.html">BITS NVDA Course, Week 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson_week02.html">BITS NVDA Course, Week 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">BITS NVDA Course, Week 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson_week04.html">Week Four</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology">Terminology</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-review"><strong>Text Review</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-cursor"><strong>Review Cursor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object"><strong>Object</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navigator-object"><em><strong>Navigator Object</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-hierarchy"><strong>Object hierarchy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parent-child-objects"><strong>Parent-Child Objects</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-modes"><strong>Review Modes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tethering"><strong>tethering</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-text-review-good-for">What is text review good for?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-object-review-good-for">What is object review good for?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-summary">Concept Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-with-jaws">Compare with JAWS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-learn-object-navigation">Why learn object navigation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-summary">In Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-object-navigation-and-text-review">Combining Object Navigation and Text Review</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keystrokes-and-yet-more-keystrokes">Keystrokes and yet more keystrokes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-it-all-together">Putting It All together</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#most-useful-keystrokes">Most useful keystrokes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-review-with-a-desktop-keyboard">Text Review with a Desktop keyboard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-navigation-with-a-desktop-keyboard">Object Navigation with a Desktop Keyboard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laptop-mode-object-navigation">Laptop Mode Object Navigation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-ideas">Homework Ideas</a></li>
+</ul>
+  </nav></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="bits-nvda-course-week-3">
+<h1>BITS NVDA Course, Week 3<a class="headerlink" href="#bits-nvda-course-week-3" title="Link to this heading">#</a></h1>
+<section id="agenda">
+<h2>Agenda<a class="headerlink" href="#agenda" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Topic</p></th>
+<th class="head"><p>Instructor</p></th>
+<th class="head"><p>Length</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A.</p></td>
+<td><p>Introduction</p></td>
+<td><p>Debee Armstrong</p></td>
+<td><p>5 minutes</p></td>
+</tr>
+<tr class="row-odd"><td><p>B.</p></td>
+<td><p>Student questions</p></td>
+<td><p>All instructors</p></td>
+<td><p>15 minutes</p></td>
+</tr>
+<tr class="row-even"><td><p>C.</p></td>
+<td><p>Optional homework presentations</p></td>
+<td><p>Various Students</p></td>
+<td><p>TBD</p></td>
+</tr>
+<tr class="row-odd"><td><p>D.</p></td>
+<td><p>Basic Text Review Commands</p></td>
+<td><p>Joel Dodson</p></td>
+<td><p>20 minutes</p></td>
+</tr>
+<tr class="row-even"><td><p>e.</p></td>
+<td><p>Object Navigation</p></td>
+<td><p>Joel Dodson</p></td>
+<td><p>30 Minutes</p></td>
+</tr>
+<tr class="row-odd"><td><p>F.</p></td>
+<td><p>Student questions</p></td>
+<td><p>All instructors</p></td>
+<td><p>remainder of class time</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="terminology">
+<h2>Terminology<a class="headerlink" href="#terminology" title="Link to this heading">#</a></h2>
+<section id="text-review">
+<h3><strong>Text Review</strong><a class="headerlink" href="#text-review" title="Link to this heading">#</a></h3>
+<p>Refers to commands for reviewing text without changing the position of the focus or cursor. These are NVDA commands that enable you to read by character, word or line.</p>
+</section>
+<section id="review-cursor">
+<h3><strong>Review Cursor</strong><a class="headerlink" href="#review-cursor" title="Link to this heading">#</a></h3>
+<p>An imaginary cursor or pointer that points to a particular character. By “imaginary” we mean that it is not part of Windows , but it is a way for NVDA to locate a particular point onscreen. Text review moves this pointer without changing where Windows knows the focus is located.</p>
+</section>
+<section id="object">
+<h3><strong>Object</strong><a class="headerlink" href="#object" title="Link to this heading">#</a></h3>
+<p>Everything in Windows is an object. A window, a control, a running program or a single character, all are objects. Windows itself is a giant database of objects and what appears onscreen is just the tip of that iceberg!</p>
+</section>
+<section id="navigator-object">
+<h3><em><strong>Navigator Object</strong></em><a class="headerlink" href="#navigator-object" title="Link to this heading">#</a></h3>
+<p>Yet another “imaginary” pointer built in to NVDA. This marks a particular objectin Windows and it can move from one object to another.</p>
+</section>
+<section id="object-hierarchy">
+<h3><strong>Object hierarchy</strong><a class="headerlink" href="#object-hierarchy" title="Link to this heading">#</a></h3>
+<p>Objects are arranged with some containing other objects. This branching “tree-structure” is called a hierarchy. For example a dialog box is an object, it is inside a window, which itself is an object. Inside the dialog box you might find a list. That list is of course an object. And inside that list you would find items, Each item is an object. When voiceover users on the mac “interact” with a control, they are also moving down the branch of an object hierarchy.</p>
+</section>
+<section id="parent-child-objects">
+<h3><strong>Parent-Child Objects</strong><a class="headerlink" href="#parent-child-objects" title="Link to this heading">#</a></h3>
+<p>This refers to where an object is positioned in the hierarchy. For example a list item is a child object and its parent object is the actual list. The list too is a child object; its parent object is the dialog box containing the list. The dialog box is a child object to the window containing that box. The window is the parent object to the dialog box. NVDA calls the parent object the “containing object” but most Windows developers use the parent-child terminology.</p>
+</section>
+<section id="review-modes">
+<h3><strong>Review Modes</strong><a class="headerlink" href="#review-modes" title="Link to this heading">#</a></h3>
+<p>NVDA has three separate review modes; that is three different modes where text review is available. You are always using one of these modes, and the review cursor is tethered to what is appropriate in that mode. The three modes are:</p>
+<ul class="simple">
+<li><p>Screen Review</p></li>
+<li><p>Object Review</p></li>
+<li><p>Document review</p></li>
+</ul>
+<p>Screen review is just like it sounds. It lets you examine all text that NVDA can see on your visible screen. Often, text is there that NVDA cannot see.</p>
+<p>Object review is also just like it sounds. It lets you move the “navigator object” around the hierarchy so you can navigate even outside the visible screen.</p>
+<p>As you move from one Windows object to another, your text review commands operate only on the object the navigator object is pointing to. For example, if you navigate to a dialog box, navigate inside it to a list, navigate inside the list to a single item in that list, then use text review, you are only able to read the text of that single list item.</p>
+<p>Document review works only when you are in what NVDA calls a “browse mode” object, what JAWS calls a virtual cursor. You normally can only use the document review mode in a word processor, usually Word, or HTML pages such as a message in Outlook or a web page in your browser. There are exceptions, however. Many applications that use HTML will put you in a web-like interface that NVDA can navigate with document review.</p>
+<p>NVDA has keystrokes to go to the “next” or previous mode and that next and previous depend on what review mode is currently available. For example, if you aren’t on a web page you only have screen review and object review available.</p>
+</section>
+<section id="tethering">
+<h3><strong>tethering</strong><a class="headerlink" href="#tethering" title="Link to this heading">#</a></h3>
+<p>Refers to the concept of keeping one pointer or cursor at the same position as another cursor. For eexample, the navigator object can be tethered to the focus and usually is, but when you use object navigation, you are moving away from the focus. The review cursor is also usually tether to the focus, but when you use screen review, it also moves around. The same is true for text review.</p>
+</section>
+</section>
+<section id="what-is-text-review-good-for">
+<h2>What is text review good for?<a class="headerlink" href="#what-is-text-review-good-for" title="Link to this heading">#</a></h2>
+<p>Sometimes when you hear speech you don’t know how a word is spelled; a good example is a person’s email address, or a code you must write down. Using your arrow keys you can move line by line, word by word, or character by character.</p>
+<p>That’s all good if you have what many programmers call the caret or cursor, and some books call the insertion point. This is your editing cursor, that lets you read and alter text.</p>
+<p>But sometimes the text you are reading has no cursor. Maybe it’s information about the progress of an update, or you’re trying to pair a device and need to read text onscreen. In this case, you use text review commands to navigate by line, word or character to explore text without need for a cursor to be available. As long as something has focus, you can use text review to examine it. This is similar to the JAWS keystrokes that let you read by line, word or character.</p>
+<p>But text review can only see the current control. If that control for example is the OK button in a dialog box, the only thing you’ll be able to review is the letters O and K. But if the control is an informational message, such as the information from Windows update, you will be able to easily read it with text review. and if you are in the screen review mode, text review can often navigate more text.</p>
+<p>Another use for text review is also great even when you do have a cursor. Suppose you are doing a search and replace. You type in your search phrase, tab to replace and now you want to verify your search entry was currect. You can tab back there of course, but you can also use text review to examine the text without loosing your position.</p>
+<p>Or suppose you are filling out a form or taking a quiz. You are typing your answer, but need to review the entire question again. Text review comes in handy, because you can stay positioned in the edit field typing your answer while using text review to re-examine the question to which you are responding.</p>
+</section>
+<section id="what-is-object-review-good-for">
+<h2>What is object review good for?<a class="headerlink" href="#what-is-object-review-good-for" title="Link to this heading">#</a></h2>
+<p>Object review, though complex is very powerful. It lets you navigate the entire database of what NVDA can see, not just what’s at your current focus or what’s currently onscreen. Not only can you move the navigator object outside your currently focused application, you can also take it somewhere, move the mouse there and issue a click. This gives you the ability to click on something NVDA can see but that you cannot reach with the keyboard.</p>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<p>Sighted users can type in one place while looking at another place onscreen. This makes them more efficient than screen reader users, who often need to arrow or tab to an item simply to read it. Text review gives us back some of that power, the ability to read text without moving our focus.</p>
+</section>
+</section>
+<section id="concept-summary">
+<h2>Concept Summary<a class="headerlink" href="#concept-summary" title="Link to this heading">#</a></h2>
+<p>A cursor is a visual pointer that often blinks that points to a single character, for example in a word processor or edit box on a web page. The cursor can be called a caret or an insertion point; those terms are synonyms.</p>
+<p>The “focus” or “system focus” is where Windows thinks you are located. If there’s a cursor, then that’s also where the system focus is. But if you are tabbing or arrowing around where no cursor exists, there is still a “system focus” where you are located. If a mouse user clicks something, they have moved the system focus to that something. If you hear the term “keyboard focus” it indicates that you arrived there with a keystroke and not the click of a mouse.</p>
+<p>Text review is usually tethered to the system focus unless you move it away with NVDA commands.</p>
+<p>The term “navigator object” is specific to NVDA. It is an NVDA concept only. It is where NVDA is pointing to in the object hierarchy. The navigator object is usually tethered with the system focus, unless you use object navigation to move it elsewhere.</p>
+</section>
+<section id="compare-with-jaws">
+<h2>Compare with JAWS<a class="headerlink" href="#compare-with-jaws" title="Link to this heading">#</a></h2>
+<p>If you use JAWS, you may know it has five cursors labeled PC, JAWS, Invisible, Virtual and Touch.  NVDA is not really any different except because it was developed by geeks, its concepts can appear more complicated.</p>
+<p>The JAWS PC cursor is the same thing as what NVDA calls the focus or the caret or the cursor or the insertion point. When you edit text, there’s actually a cursor onscreen, and because it can look like a circumflex, it is often called the caret. But books on Microsoft Office also call the same thing the insertion point. JAWS calls it the PC cursor and NVDA the focus.</p>
+<p>If you are not editing text, but you can navigate to a control using either the keyboard or the mouse, that control is considered to have “gained focus” and visually a dotted outline surrounds the control.  JAWS also refers to this as the PC cursor, and NVDA the focus.</p>
+<p>When you use the JAWS keystrokes to move to the next or previous line, word or character, you are using the equivalent of the NVDA text review. That is, the focus or editing cursor is not moving, JAWS is pointing to somewhere else to allow you to read the previous or next line, word or character without needing to change your actual cursor position or focus.</p>
+<p>When you are in NVDA’s browse mode, it is the same as the JAWS virtual cursor. When you are in NVDA’s focus mode, it’s the same as
+the JAWS forms mode.</p>
+<p>NVDA’s review mode cursor is like the JAWS invisible cursor,  and if you use either you will notice they oftenn cannot find everything on screen. This is because proper Windows techniques are not always used when building a Windows application. But usually what the invisible cursor can see is also what the NVDA review mode can see. Both of these only see what is written to the screen.</p>
+<p>NVDA’s navigator object actually goes beyond this, enabling you to explore the entire database of Windows objects, often called an off-screen model. You only use object navigation if you need to; many users function quite fine without knowing how it works.</p>
+<p>JAWS actually also has object navigation, but it’s considered an advanced topic. Read more about it under the JAWS help in the section titled Using the Touch Cursor, under the last heading “Advanced navigation”.</p>
+</section>
+<section id="why-learn-object-navigation">
+<h2>Why learn object navigation<a class="headerlink" href="#why-learn-object-navigation" title="Link to this heading">#</a></h2>
+<p>It seem really unnecessarily complex. But it allows you to use applications that won’t accept the focus. It allows you to read all the available text on and off the screen that is currently in the giant Windows database regardless of where your focus or cursor is located.</p>
+<p>For example, if you receive an error message but cannot understand it, object navigation will allow you to poke around Windows until you find it. Once the navigator object lands on that message, you can use text review commands to inspect it.</p>
+<p>Remember, we said text review can only review the focused object, such as the OK button in a dialog box. But object review can navigate to other controls in that box, and then, you can use text review to explore them.</p>
+<p>Object navigation can be extremely helpful when working with the ribbon in File explorer and Office products. It’s also great for working with Windows settings. Try using it also with Windows store apps; those that were designed with accessibility in mind  can be even more accessible with object navigation.</p>
+</section>
+<section id="in-summary">
+<h2>In Summary<a class="headerlink" href="#in-summary" title="Link to this heading">#</a></h2>
+<p>Object navigation enables you to explore the Windows hierarchy and see what’s there. It is a way to position a mouse to somewhere you need to click when an object cannot accept keyboard focus. A mastery of object navigation gives you the power to work with less accessible applications.</p>
+</section>
+<section id="combining-object-navigation-and-text-review">
+<h2>Combining Object Navigation and Text Review<a class="headerlink" href="#combining-object-navigation-and-text-review" title="Link to this heading">#</a></h2>
+<p>Once you navigate to an object, you will want to use text review to see what’s there. For example if you navigate from a window down to its dialog box, down to a list box, and further down to a list item, you will now want to read that list item word by word or character by character if you didn’t understand speech fully when you landed the navigator object on the list item. That’s another great use for text review.</p>
+</section>
+<section id="keystrokes-and-yet-more-keystrokes">
+<h2>Keystrokes and yet more keystrokes<a class="headerlink" href="#keystrokes-and-yet-more-keystrokes" title="Link to this heading">#</a></h2>
+<p>To move the navigator object, a plethora of keystrokes exists. To use text review, whether you are examining something that has the Windows focus or the navigator object focus, there are yet more keystrokes.</p>
+<p>Master a handful at a time. For example, focus simply on text review and use it on a familiar document so you get the hang of how it works. A list of most common keystrokes both for text review and object navigation is given below with explanations of how they work.</p>
+<p>(You have also received a current copy of the NVDA keystroke list)</p>
+<p>One good place to try object navigation is the Windows Settings application. Explore different settings first with your tab and arrow keys. Then try object navigation. Once you can comfortably move around the hierarchy, use text review to explore what the navigator object lands on.</p>
+<p>To explore reading dialog boxes try these ideas:</p>
+<ul class="simple">
+<li><p>Hit the Windows key to get the search box, type Winver and press Enter. You will encounter the “About Windows” dialog box. Use object navigation and text review to explore this box. Note that you cannot tab around it to rread everything with your arrow keys.</p></li>
+<li><p>Hold the Windows key while pressing R to get a Run command. In the edit box that appears, type some nonsense, a gibberish bunch of letters is good. Press Enter. An error message appears. Explore it with object navigation and text review.</p></li>
+<li><p>Do you have a favorite program with controls you cannot readily access? Try your newly-found object navigation skills to explore it.</p></li>
+</ul>
+</section>
+<section id="putting-it-all-together">
+<h2>Putting It All together<a class="headerlink" href="#putting-it-all-together" title="Link to this heading">#</a></h2>
+<p>Don’t worry if you are completely confused. This is one feature set you use when you need it. For example, your boss is requiring you use an application that doesn’t seen to be very keyboard accessible. Or you need to carefully review some messages a program is sending. In general, you would:</p>
+<ol class="arabic simple">
+<li><p>Toggle to the appropriate review mode.</p></li>
+<li><p>If in object review, first use object navigation to get to the object with the text you need to read. If you are in an HTML document, this isn’t necessary and it’s also not necessary if you are trying to just review the screen.</p></li>
+<li><p>Use text review to go to the “top of the text that the review cursor can navigate.</p></li>
+<li><p>Review line by line or word by word, depending on how much text is there.</p></li>
+<li><p>Review by character if you get to a word whose spelling you need or that you didn’t understand.</p></li>
+</ol>
+</section>
+<section id="most-useful-keystrokes">
+<h2>Most useful keystrokes<a class="headerlink" href="#most-useful-keystrokes" title="Link to this heading">#</a></h2>
+<p>You can find all keystrokes in the NVDA Key commands document.</p>
+<section id="text-review-with-a-desktop-keyboard">
+<h3>Text Review with a Desktop keyboard<a class="headerlink" href="#text-review-with-a-desktop-keyboard" title="Link to this heading">#</a></h3>
+<p>Note: all these use the numeric keypad. Notice the pattern that helps you master these keystrokes.</p>
+<ul class="simple">
+<li><p>Go to previous line of text. – Seven</p></li>
+<li><p>Go to next line of text. – Nine</p></li>
+<li><p>Go to previous word. – Four</p></li>
+<li><p>Go to next word. – Six</p></li>
+<li><p>Go to previous character. – One</p></li>
+<li><p>Go to next character. – Three.</p></li>
+<li><p>Read current line. – Eight</p></li>
+<li><p>Read current word. – Five</p></li>
+<li><p>Read Current character. – Two</p></li>
+</ul>
+<p>Notice that 9 8 and 7 handle lines, 4 5 and 6 handle words and 1 2 and 3 handle characters, with everything going from left to right, previous, current and next.</p>
+<p>Now,  notice what happens when you add the shift keys with the numbers on your numeric keypad.</p>
+<ul class="simple">
+<li><p>Go to top line. – Shift with seven</p></li>
+<li><p>Go to bottom line. – Shift with nine</p></li>
+<li><p>Go to beginning of line. – Shift and One</p></li>
+<li><p>Go to end of line. – Shift and Three.</p></li>
+</ul>
+<p>So for example if you wanted to read the next line, you’d press the 9. For the next word, it’s the 6. But if you wanted to go to the end of that line,you’d hold the shift and press the Three. If you wanted to move to a previous line, you’d use the seven key. For the previous word, it’s the 4. But if you wanted to return back to the start of the line, you’d hole the shift and the 1 key.  To return to the beginning of text, it’s the shift and the 7 key and to the end of the text, it’s the shift and the 9 key.</p>
+<p>Note too that the shift with the numeric keypad 4 and 6 are not defined. You can use the input gestures feature to assign them to a regularly used navigation command.</p>
+<p>This pattern makes more sense when you practice it, so load up a document in Word or notepad and fool around with text review.</p>
+<p>If you will frequently use text review on a laptop you can always purchase a small numeric keypad that connects via USB or a full-sized desktop keyboard.</p>
+<p>The advantage of the desktop mode is that the pattern is easier to remember.</p>
+<p>But the laptop mode is not too far off: it also has a pattern. However since you don’t have a separate numeric keypad, you have to use the NVDA key together with familiar keys.</p>
+<ul class="simple">
+<li><p>Go to previous line. – NVDA+Up Arrow</p></li>
+<li><p>Go to next line. – NVDA+Down arrow</p></li>
+<li><p>Go to previous word. – NVDA+Control+Left arrow</p></li>
+<li><p>Go to next word. – NVDA+Control+Right arrow</p></li>
+</ul>
+<p>Note that if you are moving the system cursor up and down you are using the up and down arrow keys to read by lines. But if you are reviewing text without moving the system cursor, you use the NVDA key with up and down arrow to review by lines.</p>
+<p>And if you are moving the system cursor by words, it’s the control with the left and right arrows that you are using. But if you are reviewing by words without moving the system cursor, then you are holding the NVDA key together with the control and a left or right arrow key.</p>
+<p>The same patternn continues for moving the review cursor to the start or end of a line.</p>
+<ul class="simple">
+<li><p>Go to start of line. – NVDA+Home</p></li>
+<li><p>Go to end of line. – NVDA+End.</p></li>
+</ul>
+<p>You use Home and end to move the system cursor to the start or end of a line. You hold the NVDA key with home or end to move the review cursor to the start or end of a line.</p>
+<p>Moving by characters in laptop mode continues with this pattern.</p>
+<ul class="simple">
+<li><p>Go to previous character. – NVDA+Left arrow</p></li>
+<li><p>Go to next character. – NVDA+right arrow</p></li>
+</ul>
+<p>The left and right arrows by themselves move the system cursor whereas these arrow keys when pressed while holding the NVDA key move the review cursor to the next or previous character.</p>
+<p>Remember, in laptop mode, the NVDA key is the caps lock key.</p>
+<p>To read the current item in laptop mode the pattern breaks a bit. it uses the period key with the NVDA key.</p>
+<ul class="simple">
+<li><p>Read the current line under the review cursor. – NVDA+Shift+Period</p></li>
+<li><p>Read the current word under the review cursor. – NVDA+Control+Period</p></li>
+<li><p>Read the current character under the review cursor. – NVDA+Period</p></li>
+</ul>
+<p>Remember too we are dealing with the review cursor here. If you are reading the current line that the system cursor is positioned on, the keystroke is NVDA+L. If text review is tethered to the system focus, then you will hear the same thing with NVDA+Shift+Period.</p>
+</section>
+<section id="object-navigation-with-a-desktop-keyboard">
+<h3>Object Navigation with a Desktop Keyboard<a class="headerlink" href="#object-navigation-with-a-desktop-keyboard" title="Link to this heading">#</a></h3>
+<p>This is a very easy pattern to follow:</p>
+<ul class="simple">
+<li><p>Previous object. –NVDA+Four</p></li>
+<li><p>Next object. – NVDA+Six</p></li>
+<li><p>Parent object. – NVDA+Eight</p></li>
+<li><p>First child object – NVDA+2</p></li>
+</ul>
+<p>Think of this as a three-dimensional structure. If you hold the NvDA key and keep ressing the numeric keypad 8 you are going up in the hierarchy to the object containing all objects. If you hold the NVDA key and press the numeric keypad 2, you are moving down to the first child object, then down to its first child object, etc. “Turtles all the way down!”</p>
+<p>If you press the NVDA key with the numberic keypad 4, you are moving in the same level of the hierarchy to the first object, and you are likely already there if you got there with the 2 key previously. But if you hold the NVDA key with the numeric keypad 6, you are also moving on the same level, right to the next object on that level.</p>
+<p>A good place to explore this is by loading up an application with dialog boxes, such as settings in an app or preferences or configuration. The office ribbon also is good for object navigation. Notice its usefulness within a ribbon or menu structure.</p>
+<p>Moving from right to left on most desktop keyboards you have the minus key, the star or multiply key and the slash or divide key. The fourth key from the right is the numeric lock. If that is on then the number pad reverts to its normal usage, but when it is off, the NVDA navigation keys are active.</p>
+<p>If you press the Divide key, the third one from the right, it will click the left mouse button. If you hold the NVDA key and press the divide key, you can move the mouse pointer to the location of the navigator object. This is useful if you need to click on a control where you cannot get keyboard focus to work. So you’d first navigate there with object navigation. Then you’d hold the insert key which is the NVDA key and press the numeric keypad divide. Next you’d press the numeric keypad divide by itself to actually click on that control.</p>
+</section>
+<section id="laptop-mode-object-navigation">
+<h3>Laptop Mode Object Navigation<a class="headerlink" href="#laptop-mode-object-navigation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Previous Object. – NVDA+Shift+Left arrow</p></li>
+<li><p>Next object. – NVDA+Shift+Right arrow</p></li>
+<li><p>Parent Object – NVDA+Shift+Up arrow</p></li>
+<li><p>First Child Object. – NVDA+Shift+Down</p></li>
+<li></li>
+<li><p>This is the same pattern as screen review except that objects can contain objects; A parent object may itself have a parent. A child object always has a parent object but it can also have siblings, that is multiple child objects you navigate left and right with the NVDA- Shift and right or left arrow keys. Remember in laptop mode the NVDA key is the caps lock key.</p></li>
+</ul>
+<p>If you want to toggle between the three review modes, load up a web page. Then explore using document review, object review, and screen review.</p>
+</section>
+</section>
+<section id="homework-ideas">
+<h2>Homework Ideas<a class="headerlink" href="#homework-ideas" title="Link to this heading">#</a></h2>
+<p>Prepare a presentation on something that interest you or try one of these ideas:</p>
+<ul class="simple">
+<li><p>How do you use the review cursor to copy text to the clipboard to paste in to another application. How for example would you email your Windows version to tech support?</p></li>
+<li><p>Demonstrate how you can use object navigation to click the mouse on a control you cannot access from the keyboard.</p></li>
+<li><p>Describe the patterns inherent in text review and object navigation keystrokes. How do these patterns help you memorize the keystrokes you need?  - Show how to read information in Windows update under settings.</p></li>
+<li><p>Use text and object review to explore what wi-fi networks are available.</p></li>
+<li><p>Use object navigation to explore the ribbon in any Microsoft Office product or in File explorer.</p></li>
+<li><p>Explain how to route the review cursor or navigator object to the focus so you can return to your starting point.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lesson_week02.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">BITS NVDA Course, Week 2</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lesson_week04.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Week Four</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Oct 14, 2025.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

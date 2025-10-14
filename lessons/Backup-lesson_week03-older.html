@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BITS NVDA Course, Week 3 &#8212; NVDA Course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lessons/Backup-lesson_week03-older';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1" />
+    <meta name="docbuild:last-update" content="Oct 14, 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NVDA Course</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Lesson Notes
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bit-acb/nvdacourse" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Lesson Notes
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/bit-acb/nvdacourse" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology">Terminology</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-review">**Text Review</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-cursor"><strong>Review Cursor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object"><strong>Object</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navigator-object"><em><strong>Navigator Object</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-hierarchy">**Object hierarchy **</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parent-child-objects">**Parent-Child Objects **</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-text-review-good-for">What is text review good for?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-learn-object-navigation">Why learn object navigation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-object-navigation-and-text-review">Combining Object Navigation and Text Review</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keystrokes-and-yet-more-keystrokes">Keystrokes and yet more keystrokes</a></li>
+</ul>
+  </nav></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="bits-nvda-course-week-3">
+<h1>BITS NVDA Course, Week 3<a class="headerlink" href="#bits-nvda-course-week-3" title="Link to this heading">#</a></h1>
+<section id="agenda">
+<h2>Agenda<a class="headerlink" href="#agenda" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Topic</p></th>
+<th class="head"><p>Instructor</p></th>
+<th class="head"><p>Length</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A.</p></td>
+<td><p>Introduction</p></td>
+<td><p>Debee Armstrong</p></td>
+<td><p>5 minutes</p></td>
+</tr>
+<tr class="row-odd"><td><p>B.</p></td>
+<td><p>Student questions</p></td>
+<td><p>All instructors</p></td>
+<td><p>15 minutes</p></td>
+</tr>
+<tr class="row-even"><td><p>C.</p></td>
+<td><p>Optional homework presentations</p></td>
+<td><p>Various Students</p></td>
+<td><p>TBD</p></td>
+</tr>
+<tr class="row-odd"><td><p>D.</p></td>
+<td><p>Basic Text Review Commands</p></td>
+<td><p>Joel Dodson</p></td>
+<td><p>20 minutes</p></td>
+</tr>
+<tr class="row-even"><td><p>e.</p></td>
+<td><p>Object Navigation</p></td>
+<td><p>Joel Dodson</p></td>
+<td><p>30 Minutes</p></td>
+</tr>
+<tr class="row-odd"><td><p>F.</p></td>
+<td><p>Student questions</p></td>
+<td><p>All instructors</p></td>
+<td><p>remainder of class time</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="terminology">
+<h2>Terminology<a class="headerlink" href="#terminology" title="Link to this heading">#</a></h2>
+<section id="text-review">
+<h3>**Text Review<a class="headerlink" href="#text-review" title="Link to this heading">#</a></h3>
+<p>Refers to commands for reviewing text without changing the position of the focus or cursor.</p>
+</section>
+<section id="review-cursor">
+<h3><strong>Review Cursor</strong><a class="headerlink" href="#review-cursor" title="Link to this heading">#</a></h3>
+<p>An imaginary cursor or pointer that points to a particular character onscreen. By “imaginary” we mean that it is not visible, but it is a way for NVDA to locate a particular point onscreen. Text review moves this pointer without changing where Windows knows the focus is located.</p>
+</section>
+<section id="object">
+<h3><strong>Object</strong><a class="headerlink" href="#object" title="Link to this heading">#</a></h3>
+<p>Everything in Windows is an object. A window, a control, a running program or a single character, all are objects. Windows itself is a giant database of objects and what appears onscreen is just the tip of that iceberg!</p>
+</section>
+<section id="navigator-object">
+<h3><em><strong>Navigator Object</strong></em><a class="headerlink" href="#navigator-object" title="Link to this heading">#</a></h3>
+<p>Yet another “imaginary” pointer built in to NVDA. This marks a particular objectin Windows and it can move from one object to another.</p>
+</section>
+<section id="object-hierarchy">
+<h3>**Object hierarchy **<a class="headerlink" href="#object-hierarchy" title="Link to this heading">#</a></h3>
+<p>Objects are arranged with some containing other objects. This branching “tree-structure” is called a hierarchy. For example a dialog box is an object, it is inside a window, which itself is an object. Inside the dialog box you might find a list. That list is of course an object. And inside that list you would find items, Each item is an object. When voiceover users on the mac “interact” with a control, they are also moving down the branch of an object hierarchy.</p>
+</section>
+<section id="parent-child-objects">
+<h3>**Parent-Child Objects **<a class="headerlink" href="#parent-child-objects" title="Link to this heading">#</a></h3>
+<p>This refers to where an object is positioned in the hierarchy. For example a list item is a child object and its parent object is the actual list. The list too is a child object; its parent object is the dialog box containing the list. The dialog box is a child object to the window containing that box. The window is the parent object to the dialog box.</p>
+</section>
+</section>
+<section id="what-is-text-review-good-for">
+<h2>What is text review good for?<a class="headerlink" href="#what-is-text-review-good-for" title="Link to this heading">#</a></h2>
+<p>Sometimes when you hear speech you don’t know how a word is spelled; a good example is a person’t email address, or a code you must write down. Using your arrow keys you can move line by line, word by word, or character by character.</p>
+<p>That’s all good if you have what many programmers call the caret or cursor, and some books call the insertion point. This is your editing cursor, that lets you read and alter text.</p>
+<p>But sometimes the text you are reading has no cursor. Maybe it’s information about the progress of an update, or you’re trying to pair a device and need to read text onscreen. In this case, you use text review commands to navigate by line, word or character to explore text without need for a cursor to be available. As long as something has focus, you can use text review to examine it. This is similar to the JAWS invisible cursor.</p>
+<p>But text review can only see the current control. If that control for example is the OK button in a dalog box, the only thing you’ll be able to review is the letters O and K. But if the control is an informational message, such as the percentage of a Windows update download, you will be able to easily read it with text review.updat</p>
+<p>Another use for text review is also great even when you do have a cursor. Suppose you are doing a search and replace. You type in your search phrase, tab to replace and now you want to verify your search entry was currect. You can tab back there of course, but you can also use text review to examine the text without loosing your position.</p>
+<p>Or suppose you are filling out a form or taking a quiz. You are typing your answer, but need to review the entire question again. Text review comes in handy, because you can stay positioned in the edit field typing your answer while using text review to re-examine the question to which you are responding.</p>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<p>Sighted users can type in one place while looking at another place onscreen. This makes them more efficient than screen reader users, who often need to arrow or tab to an item simply to read it. Text review gives us back some of that power, the ability to read text without moving our focus.</p>
+</section>
+</section>
+<section id="why-learn-object-navigation">
+<h2>Why learn object navigation<a class="headerlink" href="#why-learn-object-navigation" title="Link to this heading">#</a></h2>
+<p>It seem really unnecessarily complex. But it allows you to use applications that won’t accept the focus. It allows you to read all the available text on and off the screen that is currently in the giant Windows database regardless of where your focus or cursor is located.</p>
+<p>For example, if you receive an error message but cannot understand it, object navigation will allow you to poke around Windows until you find it. Once the navigator object lands on that message, you can use text review commands to inspect it.</p>
+<p>Remember, we said text review can only review the focused object, such as the OK button in a dialog box. But object review can navigate to other controls in that box, and then, you can use text review to explore them.</p>
+<section id="id1">
+<h3>Summary<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Object navigation enables you to explore the Windows hierarchy and see what’s there. It is a way to position a mouse to somewhere you need to click because an object cannot accept keyboard focus. A mastery of object navigation gives you the power to work with less accessible applications.</p>
+</section>
+</section>
+<section id="combining-object-navigation-and-text-review">
+<h2>Combining Object Navigation and Text Review<a class="headerlink" href="#combining-object-navigation-and-text-review" title="Link to this heading">#</a></h2>
+<p>Once you navigate to an object, you will want to use text review to see what’s there. For example if you navigate from a window down to its dialog box, down to a list box, and further down to a list item, you will now want to read that list item word by word or character by character if you didn’t understand speech fully when you landed the navigator object on the list item. That’s another great use for text review.</p>
+</section>
+<section id="keystrokes-and-yet-more-keystrokes">
+<h2>Keystrokes and yet more keystrokes<a class="headerlink" href="#keystrokes-and-yet-more-keystrokes" title="Link to this heading">#</a></h2>
+<p>To move the navigator object, a plethora of keystrokes exists. To use text review, whether you are examining something that has the Windows focus or the navigator object focus, there are yet more keystrokes.</p>
+<p>Master a handful at a time. For example, focus simply on text review and use it on a familiar document so you get the hang of how it works.</p>
+<p>(You have also received a current copy of the NVDA keystroke list)</p>
+<p>One good place to try object navigation is the Windows Settings application. Explore different settings first with your tab and arrow keys. Then try object navigation. Once you can comfortably move around the hierarchy, use text review to explore what the navigator object lands on.</p>
+<p>To explore reading dialog boxes try these ideas:</p>
+<ul class="simple">
+<li><p>Hit the Windows key to get the search box, type Winver and press Enter. You will encounter the “About Windows” dialog box. Use object navigation and text review to explore this box. Note that you cannot tab around it to rread everything with your arrow keys.</p></li>
+<li><p>Hold the Windows key while pressing R to get a Run command. In the edit box that appers, type some nonsense, a gibberish bunch of letters is good. Press Enter. An error message appers. Explore it with object navigation and text review.</p></li>
+<li><p>Do you have a favorite program with controls you cannot readily access? Try your newly-found object navigation skills to explore it</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Oct 14, 2025.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>
