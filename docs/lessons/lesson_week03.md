@@ -81,6 +81,16 @@ Object review, though complex is very powerful. It lets you navigate the entire 
 
 Sighted users can type in one place while looking at another place onscreen. This makes them more efficient than screen reader users, who often need to arrow or tab to an item simply to read it. Text review gives us back some of that power, the ability to read text without moving our focus.
 
+## Concept Summary
+
+A cursor is a visual pointer that often blinks that points to a single character, for example in a word processor or edit box on a web page. The cursor can be called a caret or an insertion point; those terms are synonyms.
+
+The "focus" or "system focus" is where Windows thinks you are located. If there's a cursor, then that's also where the system focus is. But if you are tabbing or arrowing around where no cursor exists, there is still a "system focus" where you are located. If a mouse user clicks something, they have moved the system focus to that something. If you hear the term "keyboard focus" it indicates that you arrived there with a keystroke and not the click of a mouse.
+
+Text review is usually tethered to the system focus unless you move it away with NVDA commands.
+
+The term "navigator object" is specific to NVDA. It is an NVDA concept only. It is where NVDA is pointing to in the object hierarchy. The navigator object is usually tethered with the system focus, unless you use object navigation to move it elsewhere.
+
 ## Compare with JAWS
 
 If you use JAWS, you may know it has five cursors labeled PC, JAWS, Invisible, Virtual and Touch.  NVDA is not really any different except because it was developed by geeks, its concepts can appear more complicated.
@@ -171,9 +181,11 @@ Now,  notice what happens when you add the shift keys with the numbers on your n
 - Go to beginning of line. -- Shift and One
 - Go to end of line. -- Shift and Three.
 
-So for example if you wanted to read the next line, you'd press the 9. For the next word, it's the 6. But if you wanted to go to the end of that line,you'd hold the shift and press the Three. If you wanted to move to a previous line, you'd use the seven key. For the previous word, it's the 4. But if you wanted to return back to the start of the text, you'd hold the shift and then hit the seven key.
+So for example if you wanted to read the next line, you'd press the 9. For the next word, it's the 6. But if you wanted to go to the end of that line,you'd hold the shift and press the Three. If you wanted to move to a previous line, you'd use the seven key. For the previous word, it's the 4. But if you wanted to return back to the start of the line, you'd hole the shift and the 1 key.  To return to the beginning of text, it's the shift and the 7 key and to the end of the text, it's the shift and the 9 key.
 
 Note too that the shift with the numeric keypad 4 and 6 are not defined. You can use the input gestures feature to assign them to a regularly used navigation command.
+
+This pattern makes more sense when you practice it, so load up a document in Word or notepad and fool around with text review.
 
 If you will frequently use text review on a laptop you can always purchase a small numeric keypad that connects via USB or a full-sized desktop keyboard.
 
